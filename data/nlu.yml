@@ -1,0 +1,391 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hai
+    - halo
+    - hi
+    - hello
+    - Pagi
+    - Malam
+    - Siang
+    - Sore Mba/Mas
+
+- intent: goodbye
+  examples: |
+    - good bye
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - selamat tinggal
+    - Terima kasih
+    - oke
+    - Thanks
+    - makasih
+    - sip
+    - perfect
+    - great
+    - amazing
+    - yey
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - iya
+    - Benar
+
+- intent: deny
+  examples: |
+    - no
+    - tidak
+    - tidak pernah
+    - bukan
+
+- intent: mood_unhappy
+  examples: |
+    - saya sedih
+    - saya terpukul
+    - saya bersedih
+    - Saya merasa sedih
+    - Hati saya sedang terpukul
+    - Saya sedang bersedih
+    - Rasanya hati saya hancur
+    - Saya merasa down
+    - Saya sedang mengalami kesedihan
+    - Saya sedang dalam keadaan yang kurang baik secara emosional
+    - Saya sedang merasa terluka
+    - Saya sedang menghadapi kesedihan yang mendalam
+    - Rasanya sulit untuk menjaga semangat saat ini
+    - Saya sedang dalam masa keputusasaan
+    - Saya sedang mengalami perasaan sedih yang berat
+    - Saya merasa sedih dan kehilangan harapan
+    - Saya sedang merasa gelisah dan tertekan
+    - Rasanya sulit untuk tersenyum saat ini
+
+- intent: bot_challenge
+  examples: |
+    - apakah kamu seorang bot?
+    - apakah kamu manusia
+    - saya sedang berbicara dengan bot?
+    - dengan siapa saya berbicara?
+    - siapa kamu?
+    - siapa nama kamu?
+    - lo siapa?
+    - Apakah kamu seorang bot atau manusia?
+    - Bisakah kamu memberitahu saya apakah kamu seorang bot?
+    - Siapa kamu sebenarnya?
+    - Apakah kamu merupakan manusia atau entitas buatan?
+    - Apakah kamu memiliki nama yang bisa aku panggil?
+    - Siapa yang ada di balik layar?
+    - Apakah kamu adalah bot cerdas atau manusia yang menjawab?
+    - Apa latar belakangmu, apakah kamu program komputer?
+    - Bagaimana saya bisa yakin bahwa kamu bukan hanya program komputer?
+    - Siapa yang membuatmu dan apa tujuanmu?
+    - Bisakah kamu jelaskan apakah kamu manusia asli atau bukan?
+
+
+- intent: partnership
+  examples: |
+    - saya ingin mengajukan kerjasama dengan ismaya group 
+    - saya bisa menghubungi siapa, no hp & email untuk partnership
+    - Saya dari group ingin melakukan kerjasama dengan ismaya
+    - Bagaimana cara saya bisa mengajukan proposal kerjasama dengan ismaya group?
+    - Bisakah Anda memberikan informasi kontak untuk mengajukan proposal kerjasama dengan ismaya?
+    - Apakah ismaya group membuka peluang kerjasama dengan pihak lain?
+    - Saya ingin mengetahui syarat dan ketentuan kerjasama dengan ismaya group
+    - Apakah ismaya group menerima usulan kerjasama dari startup?
+    - Bagaimana langkah-langkahnya jika ingin menjalin kemitraan dengan ismaya group?
+    - Saya ingin mengetahui lebih lanjut tentang jenis kerjasama yang bisa dilakukan dengan ismaya group
+
+- intent: info - about ismaya live (wtf dwp)
+  examples: |
+    - Can I ask about tickets for We The Fest 2023 in  Jakarta ?
+    - Are you able to tell me which date the strokes are playing at we the fest?
+    - I wanna ask some questions regarding WTF ticket
+    - The Strokes hari ke berapa bro di wtf?
+    - Mau tanya tentang wtf dong
+    - Bisa berikan informasi mengenai daftar penampilan untuk We The Fest 2023?
+    - Saya tertarik untuk menghadiri We The Fest. Bisa kasih tahu harga tiketnya?
+    - Apa tanggal dan lokasi We The Fest di Jakarta tahun ini?
+    - Bagaimana cara saya membeli tiket untuk We The Fest 2023?
+    - Apakah We The Fest dapat dihadiri oleh semua usia atau hanya terbatas pada beberapa kelompok usia?
+    - Bisa berikan detail tentang artis yang akan tampil di We The Fest tahun ini?
+    - Saya dengar akan ada penjual makanan di We The Fest. Bisa berikan informasi lebih lanjut mengenai pilihan makanan?
+    - Apakah ada diskon khusus atau promosi yang tersedia untuk tiket We The Fest?
+    - Bisa berikan informasi mengenai jenis-jenis tiket yang tersedia untuk We The Fest?
+    - Apakah ada batasan mengenai barang apa saja yang boleh dibawa ke area festival di We The Fest?
+
+- intent: info - jobs ismaya group
+  examples: | 
+    - Saya Mau tanya Di Ismaya group apakah ada Lowongan kerja bapak ibu? mohon maaf sebelumnya nya bapak/ibu
+    - Ini liat nya dimana yaa pak buk  untuk posisi yg kosong? Saya ada pengalaman di Server ko bu
+    - Apakah Ismaya Group sedang membuka lowongan kerja saat ini? Saya tertarik untuk melamar.
+    - Bagaimana cara saya melihat daftar posisi pekerjaan yang tersedia di Ismaya Group?
+    - Apakah ada kesempatan karier di bidang manajemen acara di Ismaya Group?
+    - Saya memiliki pengalaman sebagai bartender. Apakah ada lowongan pekerjaan di bidang tersebut di Ismaya Group?
+    - Apakah Ismaya Group menerima lamaran kerja dari fresh graduate?
+    - Apa saja persyaratan umum untuk melamar pekerjaan di Ismaya Group?
+    - Bagaimana proses seleksi untuk mendapatkan pekerjaan di Ismaya Group?
+    - Di mana saya bisa melihat informasi lebih lanjut tentang lowongan kerja di Ismaya Group?
+    - Apakah Ismaya Group memberikan kesempatan kerja paruh waktu atau magang?
+    - Saya memiliki minat dalam bidang pelayanan pelanggan. Apakah ada posisi yang cocok untuk saya di Ismaya Group?
+    - Bagaimana saya bisa mengirimkan lamaran kerja ke Ismaya Group?
+    - Apakah Ismaya Group memiliki cabang di luar Jakarta yang juga membuka lowongan kerja?
+
+- intent: delivery_status_query
+  examples: |
+    - Apa status pengiriman makanan saya?
+    - Bisakah Anda memberi tahu saya status pengiriman pesanan saya?
+    - Di mana pengiriman makanan saya sekarang?
+    - Bisakah Anda memberi tahu saya status pesanan nomor [123456789](order_number)?
+    - Bagaimana status pengiriman makanan saya ke [123 Main St, Apt 4B](delivery_address)?
+    - Bisakah Anda memberi saya pembaruan tentang pesanan saya dengan nomor pesanan [123456789](order_number)?
+    - Saya ingin tahu status pengiriman makanan saya ke [123 Main St, Apt 4B](delivery_address), please
+    
+
+- intent: provide_order_number
+  examples: |
+    - Nomor pesanan saya adalah [123456789]
+    - ID untuk pesanan saya adalah [123456789]
+    - Nomor pesanan saya adalah [123456789]
+    - Nomor untuk pengiriman saya adalah [123456789]
+    - Nomor pesanan adalah [123456789]
+    - Nomor pengiriman adalah [12345678]
+    - Nomor untuk pengiriman makanan saya adalah [123456789]
+    - Nomor pesanan adalah [123456789]
+    - Nomor pesanan saya adalah [123456789]
+    - Konfirmasi pengiriman memiliki nomor pesanan saya [123456789]
+
+- intent: speaking_to_agent
+  examples: |
+    - Bisa saya berbicara dengan seorang agen?
+    - Saya ingin bicara dengan agen yang bertanggung jawab.
+    - Apakah ada yang bisa membantu saya? Saya ingin berbicara langsung dengan seorang agen.
+    - Bolehkah saya mendapatkan akses untuk berbicara dengan seorang agen?
+    - Saya perlu berbicara dengan seseorang yang bisa memberikan bantuan langsung.
+    - Apakah ada nomor telepon atau alamat email yang dapat saya hubungi untuk berbicara dengan agen?
+    - Saya butuh bantuan langsung. Bagaimana cara saya bisa berbicara dengan agen?
+    - Saya ingin mendapatkan panduan melalui percakapan langsung dengan seorang agen.
+    - Ada masalah yang perlu saya sampaikan. Bisakah saya berbicara dengan agen?
+    - Saya ingin berdiskusi dengan seorang agen untuk mendapatkan solusi yang tepat.
+    - Bolehkah saya mendapatkan bantuan lebih lanjut dengan berbicara langsung kepada seorang agen?
+    - Saya membutuhkan penjelasan lebih lanjut. Bisakah saya berbicara dengan agen yang berwenang?
+    - Apakah ada layanan pelanggan yang bisa saya hubungi untuk berbicara dengan seorang agen?
+    - Tolong arahkan saya ke seseorang yang bisa membantu saya. Saya ingin berbicara dengan agen.
+
+- intent: how_to_check_transaction
+  examples: |
+    - Bagaimana cara cek transaksi di fooma?
+    - Bagaimana cara saya dapat mengecek transaksi di aplikasi fooma?
+    - Bagaimana cara melihat riwayat transaksi di fooma?
+    - Apa langkah-langkah untuk mengecek transaksi di aplikasi fooma?
+    - Bagaimana caranya saya bisa memeriksa transaksi terakhir di fooma?
+    - Tolong jelaskan bagaimana cara mengecek transaksi di fooma.
+    - Apakah ada fitur di fooma untuk melihat daftar transaksi yang telah saya lakukan?
+    - Saya ingin tahu bagaimana caranya memverifikasi transaksi di aplikasi fooma.
+    - Bisakah Anda memberi tahu saya langkah-langkah untuk memeriksa transaksi saya di fooma?
+    - Apakah ada opsi untuk mengecek riwayat pembelian di fooma?
+    - Saya butuh petunjuk tentang cara menemukan catatan transaksi di aplikasi fooma.
+    - Gimana sih cara ngecek transaksi di fooma?
+    - Ada gak cara buat cek transaksi di aplikasi fooma?
+    - Cara liat riwayat transaksi di fooma tuh kayak gimana ya?
+    - Aku bingung deh, gimana cara nyari tahu transaksi di fooma?
+    - Lo tau enggak cara cek transaksi di fooma itu gimana?
+    - Ada tips gak cara buat ngecek transaksi di aplikasi fooma?
+    - Minta saran dong, gimana caranya lihat riwayat transaksi di fooma?
+
+- intent: is_the_coin_transferrable
+  examples: |
+    - Apakah koin dapat dipindahtangankan atau tidak?
+    - koinnya bisa ditransfer ga ya?
+    - Bagaimana cara mentransfer koin ini ke akun lain?
+    - Apakah ada opsi untuk mengirim koin ini ke pengguna lain?
+    - Bisakah saya mentransfer koin ini ke dompet digital lain?
+    - Bagaimana proses transfer koin ini ke akun teman saya?
+    - Saya ingin tahu apakah koin ini dapat ditransfer ke akun lainnya.
+    - Apakah ada batasan dalam mentransfer koin ini ke akun lain?
+    - Bagaimana cara melakukan transfer koin ini ke akun lainnya?
+    - Koin ini bisa dipindahin ga ya?
+    - Bisa gak sih transfer koinnya ke orang lain?
+    - Ada cara ga buat ngirim koin ini ke akun lain?
+    - Bolehkah koin ini dikirim ke pengguna lain?
+    - Koin ini bisa di-transfer atau ngga sih?
+    - Gimana caranya nge-transfer koin ini ke orang lain?
+    - Apa ada opsi buat kirim koin ini ke orang lain?
+
+- intent: asking_coin_expiration
+  examples: |
+    - Kapan koin akan expired?
+    - Koin berlaku sampai kapan?
+    - Apakah ada tanggal kadaluarsa untuk koin ini?
+    - Berapa lama koin ini akan berlaku sebelum kedaluwarsa?
+    - Koin ini akan expired setelah berapa lama?
+    - Bagaimana saya mengetahui kapan koin ini akan kedaluwarsa?
+    - Apakah ada batasan waktu untuk menggunakan koin ini sebelum kedaluwarsa?
+    - Bisakah Anda memberitahu saya sampai kapan koin ini akan berlaku?
+    - Apakah ada periode waktu tertentu dalam menggunakan koin ini sebelum masa berlakunya habis?
+    - Saya ingin tahu apakah koin ini akan tetap berlaku selamanya atau tidak.
+    - Bisakah Anda memberikan informasi tentang masa berlaku koin ini?
+    - Apakah ada tanggal akhir yang ditetapkan untuk penggunaan koin ini?
+    - Saya ingin mengetahui berapa lama koin ini akan valid sebelum harus digunakan.
+    - Bagaimana saya dapat mengecek tanggal kedaluwarsa koin ini?
+    - Apakah ada opsi perpanjangan masa berlaku koin ini setelah kedaluwarsa?
+    - Saya ingin tahu apakah koin ini akan otomatis kadaluarsa atau perlu diperbarui.
+    - Koin ini expired-nya kapan sih?
+    - Sampai kapan koin ini masih valid?
+    - Ada batas waktu nggak buat koin ini sebelum expired?
+    - Berapa lama koin ini masih bisa dipake sebelum kedaluwarsa?
+    - Koin ini bakal expired setelah berapa lama?
+    - ini poin nya ada expired date ya?
+    - Apakah ada tanggal kadaluwarsa untuk poin ini?
+    - Berlaku sampai kapan poin ini?
+    - Poin ini memiliki batas waktu penggunaan yang ditentukan?
+    - Bagaimana dengan masa berlaku poin ini, apakah ada batas waktu tertentu?
+    - Apakah poin ini akan kedaluwarsa setelah beberapa waktu?
+
+- intent: asking_coin_worth
+  examples: |
+    - Satu koin fooma sama dengan berapa rupiah ya?
+    - Koin fooma berapa jika dirupiahkan?
+    - Bagaimana perbandingan nilai koin fooma dengan mata uang rupiah?
+    - Saya ingin mengetahui berapa harga koin fooma jika diubah menjadi rupiah.
+    - Bisakah Anda memberi tahu saya berapa nilai tukar koin fooma ke dalam mata uang rupiah?
+    - Jika saya ingin menukar koin fooma dengan uang tunai, berapa jumlahnya dalam rupiah?
+    - Bagaimana cara menghitung nilai koin fooma dalam mata uang rupiah?
+    - Saya ingin mengetahui nilai tukar saat ini antara koin fooma dan rupiah
+    - Bagaimana cara mengetahui nilai uang rupiah yang setara dengan koin fooma?
+    - Saya ingin mengetahui berapa nilai koin fooma jika dibandingkan dengan mata uang lokal
+    - Koin fooma itu seharga berapa rupiah ya?
+    - Ada gak perbandingan antara nilai koin fooma sama rupiah?
+    - Mau tau dong berapa nilai koin fooma kalau ditukar dengan rupiah.
+    - 1 koin fooma itu setara brp?
+
+- intent: how_to_redeem_point
+  examples: |
+    - Bagaimana cara untuk redeem point di ismaya?
+    - Gimana cara tukar point di aplikasi?
+    - Bagaimana cara menukarkan poin di ismaya?
+    - Tolong jelaskan langkah-langkah untuk melakukan redeem poin di ismaya.
+    - Apa prosedur untuk menukarkan poin dalam aplikasi ismaya?
+    - Bagaimana caranya saya bisa menggunakan poin yang telah saya kumpulkan di ismaya?
+    - Bisakah Anda memberi tahu saya bagaimana cara menukar poin dalam aplikasi ini?
+    - Saya ingin tahu langkah-langkah untuk melakukan redeem poin di aplikasi ismaya.
+    - Apakah ada opsi untuk menukarkan poin dengan hadiah atau diskon di ismaya?
+    - Bagaimana cara saya dapat memanfaatkan poin yang saya miliki di ismaya?
+    - Saya ingin mengetahui cara yang tepat untuk mengisi formulir redeem poin di ismaya.
+    - Bagaimana saya bisa menukar poin yang telah saya kumpulkan menjadi keuntungan atau manfaat di ismaya?
+    - Apakah ada persyaratan khusus atau batasan dalam melakukan redeem poin di ismaya?
+    - Cara redeem poin di Ismaya gimana ya?
+    - Ada tutorial nggak buat tukar poin di aplikasinya?
+    - Jelasin dong langkah-langkah buat menukar poin di Ismaya.
+    - Aku bingung, ada prosedur gak buat menukarkan poin di aplikasi Ismaya?
+    - Gimana sih caranya redeem poin di Ismaya?
+
+- intent: asking_membership_benefit
+  examples: |
+    - Apa saja keuntungan menjadi member fooma?
+    - keuntungan jadi member apa ya?
+    - Apa saja manfaat atau keuntungan menjadi member fooma?
+    - Bisakah Anda jelaskan keuntungan apa saja yang diperoleh dengan menjadi member fooma?
+    - Saya ingin tahu apa saja kelebihan atau manfaat yang didapatkan sebagai member fooma.
+    - Apa yang membuat menjadi member fooma berarti mendapatkan keuntungan apa?
+    - Bagaimana menjadi member fooma dapat memberikan manfaat kepada saya?
+    - Apa saja privilege atau hak istimewa yang dimiliki oleh member fooma?
+    - Saya ingin mengetahui apa saja keistimewaan yang diberikan kepada member fooma.
+    - Apakah ada diskon khusus atau penawaran istimewa yang diberikan kepada member fooma?
+    - Saya ingin tahu apa saja fasilitas atau bonus tambahan yang diberikan kepada member fooma.
+    - Apa keuntungan ekstra yang bisa saya dapatkan sebagai member fooma dibandingkan dengan pengguna biasa?
+    - Bagaimana keanggotaan fooma dapat memberikan akses lebih kepada saya sebagai pengguna?
+    - Ada nggak sih keuntungan jadi member di fooma?
+    - Apa aja manfaatnya kalau jadi member di fooma?
+    - Keuntungannya apa aja ya kalo gabung jadi member di fooma?
+    - Mau tanya dong, apa aja yang bisa didapet kalo jadi member fooma?
+    - keuntungannnya jd member fooma apaan ya ?
+
+- intent: how_to_register
+  examples: |
+    - bagaimana cara daftar aplikasi fooma?
+    - ini cara daftar aplikasinya gimana ya?
+    - Bagaimana cara mendaftar di aplikasi fooma?
+    - Tolong jelaskan langkah-langkah untuk melakukan registrasi di aplikasi fooma.
+    - Bagaimana caranya saya bisa membuat akun di aplikasi fooma?
+    - Bisakah Anda memberi tahu saya bagaimana prosedur pendaftaran di aplikasi fooma?
+    - Saya ingin tahu langkah-langkah untuk mendaftar di aplikasi fooma.
+    - Apa yang perlu saya lakukan agar bisa memiliki akun di aplikasi fooma?
+    - Bagaimana caranya saya bisa mengisi formulir pendaftaran di aplikasi fooma?
+    - Saya ingin mengetahui cara yang tepat untuk mendaftar di aplikasi fooma.
+    - Apakah ada persyaratan khusus atau informasi yang diperlukan saat melakukan registrasi di aplikasi fooma?
+    - Bagaimana saya bisa mendapatkan informasi tentang langkah-langkah pendaftaran di aplikasi fooma?
+    - Apa saja data atau informasi yang dibutuhkan saat mendaftar di aplikasi fooma?
+    - Saya butuh petunjuk tentang cara mendaftar akun di aplikasi fooma.
+    - Bagaimana caranya saya bisa memverifikasi akun setelah melakukan pendaftaran di aplikasi fooma?
+    - Apakah ada tahap verifikasi atau konfirmasi yang perlu dilakukan setelah mendaftar di aplikasi fooma?
+    - Saya ingin tahu bagaimana cara mengaktifkan akun setelah selesai mendaftar di aplikasi fooma.
+    - Gimana sih caranya daftar aplikasi fooma?
+    - Ada tutorial ga buat daftar aplikasinya?
+    - Cara daftar di aplikasi fooma tuh gimana ya?
+    - Aku pengen tahu langkah-langkah registrasi di aplikasi fooma.
+    - Gimana caranya bikin akun di aplikasi fooma?
+
+- intent: what_is_fooma
+  examples: |
+    - apa itu aplikasi fooma?
+    - fooma itu apa ya?
+    - Saya ingin tahu tentang aplikasi fooma, bisa dijelaskan?
+    - Apa yang dimaksud dengan fooma? Saya penasaran.
+    - Apakah fooma adalah sebuah layanan atau platform tertentu?
+    - Saya belum familiar dengan fooma, bisa dijelaskan lebih lanjut?
+    - Apakah fooma adalah aplikasi mobile atau website?
+    - Bagaimana fooma berbeda dari aplikasi atau platform serupa?
+    - Saya ingin mengetahui lebih banyak tentang fooma dan apa yang ditawarkannya.
+    - Apakah fooma berhubungan dengan industri atau bisnis tertentu?
+    - Saya penasaran apa fungsi utama dari fooma dan apa manfaatnya.
+    - Bagaimana cara fooma beroperasi dan apa kegunaannya?
+    - Apakah fooma merupakan inovasi atau produk baru dalam industri tertentu?
+    - Saya ingin tahu apa saja fitur atau layanan yang disediakan oleh fooma.
+    - Fooma itu aplikasi apa sih sebenarnya?
+    - Jelasin dong tentang aplikasi fooma, apa itu?
+    - Aku penasaran, apa maksudnya fooma itu?
+    - Apa yang dimaksud dengan fooma? Penjelasan dong.
+    - Gimana sih aplikasi fooma itu sebenarnya?
+
+
+synonyms:
+  - Saya:
+      - aku
+      - gue
+      - gw
+      - ane
+      - aing
+  - Kamu:
+      - lo
+      - you
+      - elo
+      - maneh
+  - Bagaimana:
+      - gimana
+      - gmn
+  - Juga:
+      - jg
+  - Mau:
+      - pengen
+      - mw
+  - Tidak:
+      - engga
+      - ngga
+      - nggak
+      - g
+  - yang:
+      - yg
+  - itu:
+      - tuh
+      - tu
+  - jadi:
+      - jd
+    

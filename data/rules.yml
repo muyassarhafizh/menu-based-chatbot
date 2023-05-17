@@ -1,0 +1,83 @@
+version: "3.1"
+
+rules:
+
+- rule: Say Hello anytime the user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: Ask the user to hit our email for vacancy
+  steps:
+  - intent: info - jobs ismaya group
+  - action: utter_job_vacancy
+
+- rule: Ask the user to contact correct contact person for WTF
+  steps:
+  - intent: info - about ismaya live (wtf dwp)
+  - action: utter_wtf_cp
+
+- rule: Ask the user to reach a template if want to do partnership
+  steps:
+  - intent: partnership
+  - action: utter_partnership
+
+- rule: Ask the user to type 'agen' if they want to speak with agent
+  steps:
+  - intent: speaking_to_agent
+  - action: utter_typeagent
+
+- rule: FAQ How to check transaction
+  steps:
+  - intent: how_to_check_transaction
+  - action: utter_check_transaction
+
+- rule: FAQ Is the coin transferrable
+  steps:
+  - intent: is_the_coin_transferrable
+  - action: utter_coin_transferrable
+
+- rule: FAQ coin expiration date
+  steps:
+  - intent: asking_coin_expiration
+  - action: utter_coin_expiration
+
+- rule: FAQ how much the coin worth
+  steps:
+  - intent: asking_coin_worth
+  - action: utter_coin_worth
+
+- rule: FAQ how to redeem point
+  steps:
+  - intent: how_to_redeem_point
+  - action: utter_redeem_point
+
+- rule: FAQ the benefits of being a member
+  steps:
+  - intent: asking_membership_benefit
+  - action: utter_membership_benefit
+
+- rule: FAQ how to register as a member
+  steps:
+  - intent: how_to_register
+  - action: utter_how_to_register
+
+- rule: FAQ What is Fooma App
+  steps:
+  - intent: what_is_fooma
+  - action: utter_what_is_fooma

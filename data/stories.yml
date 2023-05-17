@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: Query delivery status with or without order ID
+  steps:
+  - intent: delivery_status_query
+  - action: delivery_status_query_response
+  - intent: provide_order_number
+  - action: delivery_status_query_response

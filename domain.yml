@@ -1,0 +1,102 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_unhappy
+  - bot_challenge
+  - delivery_status_query
+  - provide_order_number
+  - partnership
+  - info - about ismaya live (wtf dwp)
+  - info - jobs ismaya group
+  - speaking_to_agent
+  - how_to_check_transaction
+  - is_the_coin_transferrable
+  - asking_coin_expiration
+  - asking_coin_worth
+  - how_to_redeem_point
+  - asking_membership_benefit
+  - how_to_register
+  - what_is_fooma
+
+responses:
+  utter_greet:
+  - text: "Hai! Bagaimana kabar anda?"
+
+  utter_cheer_up:
+  - text: "Saya paham bahwa kamu sedang merasa sedih, dan saya ada di sini untuk membuatmu tersenyum! Bagaimana kalau kita membayangkan dunia di mana kucing bisa bicara dan memberikan kita lelucon lucu? Bayangkan betapa serunya percakapan yang bisa kita miliki dengan teman-teman berbulu kita! Ingatlah, tawa adalah obat terbaik, bahkan ketika kita sedang sedih. Tetaplah tegar, dan mari kita cari alasan untuk tersenyum bersama-sama! 😸"
+
+  utter_did_that_help:
+  - text: "Apakah sudah membantu?"
+
+  utter_happy:
+  - text: "Baik, teruskan!"
+
+  utter_goodbye:
+  - text: "Senang bisa membantu!! Untuk memng-improve percakapan anda dapat memberikan feedback melalui link berikut [template]"
+
+  utter_iamabot:
+  - text: "Saya ChatFooma, sebuah chatbot dari Fooma yang akan membantu anda menyelesaikan persoalan terkait aplikasi Fooma"
+
+  utter_please_rephrase:
+  - text: "Maaf saya tidak memiliki informasi terkait hal ini. Apakah ada pertanyaan atau keluhan lain? Jika anda ingin berbicara langsung dengan agen, ketik 'agen'"
+
+  utter_wtf_cp:
+  - text: "Hai, untuk informasi lebih lanjut tentang WTF 2023 silahkan whatsapp kami di +6282113003057. Terima kasih."
+
+  utter_job_vacancy:
+  - text: "Silahkan kirimkan untuk CV dan data lengkap Bapak/Ibu di email kami disini jobs@ismayagroup.com atau bisa follow aku Instagram kami disini @ismylifeatismaya untuk informasi lowongan pekerjaan di ISMAYA Group. Terima kasih"
+
+  utter_partnership:
+  - text: "Mohon hubungi @template.co.id untuk melakukan kerjasama"
+
+  utter_typeagent:
+  - text: "Ketik 'agen' jika ingin berbicara dengan agen"
+
+  utter_check_transaction:
+  - text: "Untuk mengecek transaksi anda dapat melihatnya dengan mengetuk tombol Hadiah. Kartu di dalamnya akan menunjukkan jumlah pembelanjaan dan riwayat pembelajaan, atau bisa di cek juga pada bagian Profil lalu pilih bagian My Order."
+
+  utter_coin_transferrable:
+  - text: "Mohon maaf untuk Koin Anda tidak dapat dipindahtangankan ataupun di transfer ke akun lainnya."
+
+  utter_coin_expiration:
+  - text: "Untuk Koin yang di dapatkan tersebut memiliki masa berlaku sampai dengan 12 bulan sejak Koin di dapatkan."
+
+  utter_coin_worth:
+  - text: "Untuk 1 Koin tersebut sama dengan Rp1 (1 Rupiah). Untuk itu silakan melakukan transaksi sebanyak mungkin agar mendapatkan Koin dan keuntungan lainnya."
+
+  utter_redeem_point:
+  - text: "Koin tersebut bisa di gunakan sebagai potongan harga saat melakukan pembayaran menggunakan metode pembayaran dalam Aplikasi atau bisa digunakan untuk melakukan pembayaran saat melakukan transaksi di Outlet kami ya."
+
+  utter_membership_benefit:
+  - text: "Jika melakukan transaksi melalui aplikasi Fooma atau memberitahu nomor telepon saat memesan, bisa mendapatkan cashback Koin, jumlahnya akan diberitahu setelah melakukan pemesanan, lalu akan mendapatkan keuntungan lainnya seperti diskon ongkir, diskon saat berulang tahun, hadiah-hadiah spesial buat member yang loyal pakai aplikasi nya, beragam voucher dari Ismaya Group & Legit group yang akan muncul di halaman voucher, undian berhadiah, program berhadiah, lalu akan ada pemberitahuan di aplikasi saat ada program spesial, jadi disarankan untuk sering - sering periksa di aplikasi."
+
+  utter_how_to_register:
+  - text: "Silakan download aplikasi Fooma melalui Appstore atau PlayStore lalu setelah itu silakan daftarkan menggunakan nomor telefon yang aktif agar mendapatkan kode OTP. Setelah mendapatkan kode OTP Anda bisa mulai melakukan pemesanan melalui Fooma. Jangan lupa atur preferensi, tanggal ulang tahun, dan lokasi untuk pengalaman yang lebih baik."
+
+  utter_what_is_fooma:
+  - text: "Fooma adalah Loyalty App yang sekarang resmi dipakai oleh Ismaya (Fooma x Ismaya), Aplikasi kami memiliki teknologi mutakhir untuk menyusun daftar putar F&B Anda dan aplikasi satu atap untuk semua festival musik Ismaya Live dan untuk lengkapnya silakan follow kami melalui Facebook kami di Fooma atau di Instagram kami @fooma_id."
+
+  
+entities:
+  - order_number
+  - delivery_address
+
+actions:
+  - delivery_status_query_response
+
+slots:
+  order_number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: order_number
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
