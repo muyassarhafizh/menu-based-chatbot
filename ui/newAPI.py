@@ -10,8 +10,9 @@ class HitRasa(Resource):
     def post(self):
         json_data = request.get_json()
         message = json_data.get('message')
-        response = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"message":message})
-        response_final =response.json()[0]['text']
+        sender = json_data.get('sender')
+        response = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"sender":sender,"message":message,"metadata": {"language": "id"}})
+        response_final = "\n".join([d["text"] for d in response.json() if "text" in d])
         return {"bot": response_final}
 
 api.add_resource(HitRasa, "/hitrasa")

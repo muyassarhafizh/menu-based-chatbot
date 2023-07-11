@@ -21,10 +21,12 @@ intents:
   - asking_membership_benefit
   - how_to_register
   - what_is_fooma
+  - give_option
 
 responses:
+
   utter_greet:
-  - text: "Hai! Bagaimana kabar anda?"
+  - text: "Silahkan pilih menu yang ada dibawah ini sesuai yang Anda butuhkan :\n1. Reservasi Ismaya Lifestyle\n2. Tentang Ismaya Membership Program\n3. Hubungkan dengan Help Center\nDownload Aplikasi Fooma di Appstore ataupun Playstore untuk mendapatkan informasi lebih lengkap!"
 
   utter_cheer_up:
   - text: "Saya paham bahwa kamu sedang merasa sedih, dan saya ada di sini untuk membuatmu tersenyum! Bagaimana kalau kita membayangkan dunia di mana kucing bisa bicara dan memberikan kita lelucon lucu? Bayangkan betapa serunya percakapan yang bisa kita miliki dengan teman-teman berbulu kita! Ingatlah, tawa adalah obat terbaik, bahkan ketika kita sedang sedih. Tetaplah tegar, dan mari kita cari alasan untuk tersenyum bersama-sama! 😸"
@@ -84,9 +86,15 @@ responses:
 entities:
   - order_number
   - delivery_address
+  - option
 
 actions:
   - delivery_status_query_response
+  - action_handle_options
+  - action_handle_reservation
+  - action_handle_about_ismaya
+  - action_handle_help_center
+  - action_restore_option
 
 slots:
   order_number:
@@ -95,6 +103,24 @@ slots:
     mappings:
       - type: from_entity
         entity: order_number
+  option:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: option
+  # tracking in what submenu the user curtently is
+# this slot is only used in custom actions and is not related to any entity
+  submenu: 
+    type: text
+    initial_value: "main"
+    influence_conversation: false
+    mappings:
+    - type: custom
+  suboption:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
 
 
 session_config:

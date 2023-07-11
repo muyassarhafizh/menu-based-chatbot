@@ -2,6 +2,19 @@ version: "3.1"
 
 stories:
 
+- story: choose option happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_option
+  - action: action_handle_options
+
+- story: choose option direct path
+  steps:
+  - intent: give_option
+  - action: action_handle_options
+
+
 - story: Query delivery status with or without order ID
   steps:
   - intent: delivery_status_query
